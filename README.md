@@ -42,6 +42,12 @@ Below are some images of how the editor should look when you run it.
 ![ExeFS Editing Tools](https://i.imgur.com/Ied0sVV.png)
 ![CRO Editing Tools](https://i.imgur.com/lUSGbw5.png)
 
+## Building
+
+pk3DS is a Windows Forms application which requires [.NET 10](https://dotnet.microsoft.com/download/dotnet/10.0).
+
+The executable can be built with any compiler that supports C# 14.
+
 ## Support
 
 If any bugs or errors are caught or experienced come to our [forum page](https://projectpokemon.org/home/forums/topic/34377-pk3ds-pok%C3%A9mon-3ds-rom-editor-and-randomizer/) and communicate with us on what the issue is.

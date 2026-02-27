@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 
@@ -52,13 +53,13 @@ public class AesCounter
 
     public AesCounter(ulong high, ulong low)
     {
-        Array.Copy(BitConverter.GetBytes(high).Reverse().ToArray(), Counter, 0x8);
-        Array.Copy(BitConverter.GetBytes(low).Reverse().ToArray(), 0, Counter, 0x8, 0x8);
+        Array.Copy(((IEnumerable<byte>)BitConverter.GetBytes(high)).Reverse().ToArray(), Counter, 0x8);
+        Array.Copy(((IEnumerable<byte>)BitConverter.GetBytes(low)).Reverse().ToArray(), 0, Counter, 0x8, 0x8);
     }
 
     public AesCounter(byte[] iv)
     {
-        Array.Copy(BitConverter.GetBytes(BitConverter.ToUInt64(iv, 0)).Reverse().ToArray(), Counter, 0x10);
+        Array.Copy(((IEnumerable<byte>)BitConverter.GetBytes(BitConverter.ToUInt64(iv, 0))).Reverse().ToArray(), Counter, 0x10);
     }
 
     public void Increment()

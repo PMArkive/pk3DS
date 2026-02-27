@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="pk3DS.Core/pk3DS.Core.csproj" />
+  <Project Path="pk3DS.WinForms/pk3DS.WinForms.csproj" />
+</Solution>
